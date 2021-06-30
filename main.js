@@ -38,3 +38,21 @@ pauseBtn.addEventListener('click', function(){
 });
 
 
+slowBtn.addEventListener("click", function(){
+  audioPlayer.playbackRate  =  0.5;
+  console.log("slow clicked !!");
+});
+
+
+normalBtn.addEventListener("click", function(){
+  audioPlayer.playbackRate  = 1;
+  console.log("Normal clicked !!");
+});
+
+
+fastBtn.addEventListener("click", function(){
+  audioPlayer.playbackRate = 1.5;
+  console.log("fast clicked !!");
+});
+
+

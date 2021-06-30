@@ -22,6 +22,16 @@
   border-radius: 2px;
 }
 
+.audio-player-wrapper{
+  padding: 40px;
+  background-color: rgb(255, 255, 255, 0.2);
+  width: calc(50% - 80px);
+  height: calc(60vh - 100px);
+  transform: translate(50%,50%);
+  border-radius: 12px;
+}
+
+
 .btn-btn {
   color: white;
   font-size: 15px;
