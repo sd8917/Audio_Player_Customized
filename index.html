@@ -6,44 +6,70 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./styles.css" />
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
         <title>Audio Player</title>
     </head>
 
     <body>
 
-        <section class="audio-player-section">
-
-            <div class="audio-player-wrapper">
-
-                <audio id="audioplayer">
-                    <source src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3"
-                        type="audio/ogg">
+        <div class="main-container">
+            <section id="player-section">
+                <audio  id="audio-player">
+                    <source id="audio-source" src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3"
+                        type="audio/mp3">
                 </audio>
 
-                <div id="progress-bar">
-                    <div id="progress">
 
+                <div>
+                    <div id="progress-wrapper">
+                        <div id="progress">
+
+                        </div>
+                    </div>
+
+                    <button id="btn-play">Play</button>
+                    <button id="btn-pause">Pause</button>
+                    <button id="btn-forward">+10s</button>
+                    <button id="btn-backward">-10s</button>
+
+                </div>
+
+                <h2 id="audio-track-title"></h2>
+                <p id="audio-track-artist"></p>
+        
+                <div>
+                    <button id="btn-playback-.25">0.25x</button>
+                    <button id="btn-playback-0.5">0.5x</button>
+                    <button id="btn-playback-1">1x</button>
+                    <button id="btn-playback-1.5">1.5x</button>
+
+                </div>
+
+                <div>
+                    <div>
+                        <button id="btn-volume-dec">Vol-</button>
+                        <button id="player-volume">10%</button>
+                        <button id="btn-volume-inc">Vol+</button>
                     </div>
                 </div>
 
-                <button class="btn-btn" id="playbtn">Play</button>
-                <button class="btn-btn" id="pausebtn">Pause</button>
+            </section>
 
-                <br>
-                <button class="btn-btn" id="vol_inc">Vol+</button>
+            <section id="playlist-section">
+                <!-- <article class="playlist-card">
+                    <img class="cover-img" src="https://m.media-amazon.com/images/I/81mNRm3F6KL._SS500_.jpg" />
+                    <div>
+                        <h3 class="track-title">Without you</h3>
+                        <p class="track-artist">Avicii</p>
+                    </div>
+                </article> -->
 
-                <button class="btn-btn" id="vol_dec">Vol-</button>
 
-                <br>
-                <button class="btn-btn" id="slow">slow</button>
-                <button class="btn-btn" id="normal">Normal</button>
-                <button class="btn-btn" id="fast">Fast</button>
+            </section>
+        </div>
 
-            </div>
-
-         
-
-        </section>
 
         <script src="./main.js"></script>
     </body>

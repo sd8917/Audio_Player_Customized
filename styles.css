@@ -3,46 +3,72 @@
   margin: 0;
 }
 
-.audio-player-section{
-  height: 100vh;
-  width: 100vw;
-  background: radial-gradient(circle, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
-}
+body{
+  
+      height: 100vh;
+      /* background: linear-gradient(#10416b, black); 
+     */
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 
-#progress-bar{
+} 
+  
+#progress-wrapper{
+  width: 400px;
   height: 5px;
-  width: 300px;
   background-color: #ccc;
-  border-radius:2px;
+  margin: 36px 0px  20px;
 }
 #progress{
-  height: 5px;
-  width: 0;
-  background-color: #25cf52;
-  border-radius: 2px;
+    width: 0%;
+    max-width: 400px;
+    height: 5px;
+    background-color: lightseagreen;
 }
 
-.audio-player-wrapper{
-  padding: 40px;
-  background-color: rgb(255, 255, 255, 0.2);
-  width: calc(50% - 80px);
-  height: calc(60vh - 100px);
-  transform: translate(50%,50%);
-  border-radius: 12px;
+.main-container{
+  width: 100%;
+  max-width: 800px;
+  height: 70vh;
+  background-color: rgba(255,255,255,0.4);
+  display: flex;
+ align-items: flex-start;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+ /* centering */
+  transform: translate(-50%,-50%);
+  padding: 16px;
+  border-radius: 6px;
 }
+#player-section{
+  width: calc(100% - 300px);
+  text-align: center;
 
-
-.btn-btn {
-  color: white;
-  font-size: 15px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: rgb(94, 247, 94);
-  padding:10px 20px;
-  border: 0;
-  margin:10px;
-  text-align:center;
-  cursor:pointer;
-  border-radius: 20px;
-  box-shadow: 0 0  8px red;
 }
-
+#playlist-section{
+  height: 70vh;
+  overflow-y: auto;
+  padding-right: 32px;
+}
+.playlist-card{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border-radius: 6px;
+    padding: 8px;
+    background-color: #042546;
+    margin: 5px 0;
+    color: #fff;
+}
+.cover-img{
+  width: 60px;
+  height: 60px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+.track-title {
+  margin: 0;
+}
+.track-artist {
+  margin: 4px 0 0;
+}
