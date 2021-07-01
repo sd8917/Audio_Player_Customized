@@ -24,6 +24,8 @@ audioPlayer.volume = 0.2;
 
 */
 
+
+
 btnForward.addEventListener("click",function(){
   var updateDuration = audioPlayer.currentTime + 10;
   /*If update can exceeds total duration then just
@@ -55,7 +57,7 @@ audioPlayer.addEventListener("timeupdate", function(){
 
   progressBar.style.width = (durationPlayerSoFar*100 ) + "%";
 
-  console.log("time updating ->" + audioPlayer.currentTime);
+ //  console.log("time updating ->" + audioPlayer.currentTime);
 })
 
 /*Play button */
@@ -135,8 +137,9 @@ function renderAudioTrack(data){
   $("#playlist-section").append(card);
 
   //add event listen to each fucntion
+  
   card.click(function(){
-    
+    // $(this).addClass("active");
     var id = $(this).attr("id");
 
     $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
@@ -144,14 +147,16 @@ function renderAudioTrack(data){
       $("#audio-track-title").html(response.track);
       $("#audio-track-artist").html(response.artist);
       $("#album-cover").attr("src", response.albumCover);
-
       audioPlayer.load();
       audioPlayer.play();
-
+    
     })
-  })
 
+    
+  })
+  
 }
+
 
 $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
 
@@ -160,8 +165,10 @@ console.log(response.length)
     //creat each playlist from data received from backend api
     //creaste a card ;
     renderAudioTrack(response[i]);
+    console.log(response[i]);
     console.log(response[i].track);
   }
+  
   
 })
 

@@ -123,6 +123,9 @@ body{
   font-size: 30px;
 }
 /*icon customization */
+/* #btn-pause{
+  display: none;
+} */
 #btn-play,#btn-pause,#btn-forward,#btn-backward{
   background-color: rgba(102,214,172, 0.5);
   border: 0;
@@ -173,13 +176,19 @@ i{
 }
 
 #album-cover-wrapper{
-  width: 400px;
+  width: 200px;
   height: 200px;
+  transform: translateX(50%);
 
 }
 #album-cover{
   width: 100%;
-  opacity: 0.4;
+  opacity: 0.7;
+}
+
+.active{
+  background-color: #fff;
+  color: black;
 }
 
 
