@@ -13,7 +13,8 @@ var btnPlaybackpoint25 = document.getElementById("btn-playback-point-2five");
 var btnVolumeInc = document.getElementById("btn-volume-inc");
 var btnVolumeDec = document.getElementById("btn-volume-dec");
 var playerVolume = document.getElementById("player-volume");
-
+var btnNext = document.getElementById("btn-next");
+var btnPrev = document.getElementById("btn-prev");
 //setting byDefault audion to .2
 audioPlayer.volume = 0.2;
 
@@ -146,29 +147,35 @@ function renderAudioTrack(data){
 
       $("#audio-track-title").html(response.track);
       $("#audio-track-artist").html(response.artist);
-      $("#album-cover").attr("src", response.albumCover);
-      audioPlayer.load();
-      audioPlayer.play();
-    
-    })
+      $("#album-cover").attr("src", response.albumCover);  
+      
+      
 
+      audioPlayer.load();
+      audioPlayer.play(); 
+    })
     
   })
-  
+
 }
 
 
-$.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
 
-console.log(response.length)
+$.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
+  
+   console.log(response.length)
   for(var i = 0; i < response.length;i++){
     //creat each playlist from data received from backend api
     //creaste a card ;
+    
     renderAudioTrack(response[i]);
     console.log(response[i]);
+
+
     console.log(response[i].track);
   }
-  
+
   
 })
+
 

@@ -157,6 +157,16 @@ body{
   padding: 10px;
 }
 
+#btn-next,#btn-prev{
+  background-color: rgba(102,214,172, 0.5);
+  border: 0;
+  border-radius: 5px;
+  box-sizing: content-box;
+  width: 30px;
+  height: 20px;
+  padding: 10px;
+}
+
 div{
   margin: 10px 0;
 }
@@ -175,6 +185,9 @@ i{
   color: #fff;
 }
 
+i:hover{
+  color: black;
+}
 #album-cover-wrapper{
   width: 200px;
   height: 200px;
@@ -186,9 +199,9 @@ i{
   opacity: 0.7;
 }
 
-.active{
+/* .active{
   background-color: #fff;
   color: black;
-}
+} */
 
 
