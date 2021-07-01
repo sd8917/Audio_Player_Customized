@@ -6,10 +6,10 @@ var audioPlayer = document.getElementById("audio-player");
 var progressBar = document.getElementById("progress");
 var btnBackward = document.getElementById("btn-backward");
 var btnForward = document.getElementById("btn-forward");
-var btnPlaybackPointFive = document.getElementById("btn-playback-0.5");
-var btnPlayback1PointFive = document.getElementById("btn-playback-1.5");
+var btnPlaybackPointFive = document.getElementById("btn-playback-point-five");
+var btnPlayback1PointFive = document.getElementById("btn-playback-1-point-five");
 var btnPlaybackNormal = document.getElementById("btn-playback-1");
-var btnPlaybackpoint25 = document.getElementById("btn-playback-.25");
+var btnPlaybackpoint25 = document.getElementById("btn-playback-point-2five");
 var btnVolumeInc = document.getElementById("btn-volume-inc");
 var btnVolumeDec = document.getElementById("btn-volume-dec");
 var playerVolume = document.getElementById("player-volume");
@@ -143,7 +143,7 @@ function renderAudioTrack(data){
 
       $("#audio-track-title").html(response.track);
       $("#audio-track-artist").html(response.artist);
-      $("#audio-source").attr("src", response.file);
+      $("#album-cover").attr("src", response.albumCover);
 
       audioPlayer.load();
       audioPlayer.play();
@@ -152,6 +152,7 @@ function renderAudioTrack(data){
   })
 
 }
+
 $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
 
 console.log(response.length)
@@ -163,3 +164,4 @@ console.log(response.length)
   }
   
 })
+

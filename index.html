@@ -9,13 +9,23 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+        <!-- fontawesome icon -->
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
         <title>Audio Player</title>
     </head>
 
     <body>
+        <h1 id="heading">Music Player</h1>
 
         <div class="main-container">
+
+            
             <section id="player-section">
+                <div id="album-cover-wrapper">
+                    <img id="album-cover" src="https://m.media-amazon.com/images/I/81mNRm3F6KL._SS500_.jpg"/>
+                </div>
+                
                 <audio  id="audio-player">
                     <source id="audio-source" src="https://edyoda.s3.ap-south-1.amazonaws.com/public/musicfiles/without-you.mp3"
                         type="audio/mp3">
@@ -29,10 +39,11 @@
                         </div>
                     </div>
 
-                    <button id="btn-play">Play</button>
-                    <button id="btn-pause">Pause</button>
-                    <button id="btn-forward">+10s</button>
-                    <button id="btn-backward">-10s</button>
+                    <button id="btn-backward"><i class="fas fa-backward"></i></button>
+                    <button id="btn-play"><i class="fas fa-play"></i></button>
+                    <button id="btn-pause"><i class="fas fa-pause"></i></button>
+                    <button id="btn-forward"><i class="fas fa-forward"></i></button>
+                  
 
                 </div>
 
@@ -40,18 +51,19 @@
                 <p id="audio-track-artist"></p>
         
                 <div>
-                    <button id="btn-playback-.25">0.25x</button>
-                    <button id="btn-playback-0.5">0.5x</button>
+                    <button id="btn-playback-point-2five">0.25x</button>
+                    <button id="btn-playback-point-five">0.5x</button>
                     <button id="btn-playback-1">1x</button>
-                    <button id="btn-playback-1.5">1.5x</button>
+                    <button id="btn-playback-1-point-five">1.5x</button>
 
                 </div>
+                <br>
 
                 <div>
                     <div>
-                        <button id="btn-volume-dec">Vol-</button>
+                        <button id="btn-volume-dec"><i class="fas fa-volume-down"></i></button>
                         <button id="player-volume">10%</button>
-                        <button id="btn-volume-inc">Vol+</button>
+                        <button id="btn-volume-inc"><i class="fas fa-volume-up"></i></button>
                     </div>
                 </div>
 
