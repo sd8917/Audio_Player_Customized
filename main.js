@@ -143,7 +143,7 @@ function renderAudioTrack(data){
     // $(this).addClass("active");
     var id = $(this).attr("id");
 
-    $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
+    $.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
 
       $("#audio-track-title").html(response.track);
       $("#audio-track-artist").html(response.artist);
@@ -161,7 +161,7 @@ function renderAudioTrack(data){
 
 
 
-$.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
+$.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response){
   
    console.log(response.length)
   for(var i = 0; i < response.length;i++){
