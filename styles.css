@@ -4,6 +4,8 @@
 *{
   padding: 0;
   margin: 0;
+  
+  
 }
 
 /*Scroll customization */
@@ -82,6 +84,9 @@ body{
 #player-section{
   width: calc(100% - 300px);
   text-align: center;
+  font-size: 30px;
+  font-family: 'Tangerine', cursive;
+  
 
 }
 #playlist-section{
