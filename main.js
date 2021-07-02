@@ -25,8 +25,6 @@ audioPlayer.volume = 0.2;
 
 */
 
-
-
 btnForward.addEventListener("click",function(){
   var updateDuration = audioPlayer.currentTime + 10;
   /*If update can exceeds total duration then just
@@ -142,17 +140,19 @@ function renderAudioTrack(data){
   card.click(function(){
     // $(this).addClass("active");
     var id = $(this).attr("id");
+    console.log("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id);
 
-    $.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
+    $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
 
+      
       $("#audio-track-title").html(response.track);
       $("#audio-track-artist").html(response.artist);
+      $("#audio-source").attr("src", response.file);
       $("#album-cover").attr("src", response.albumCover);  
       
-      
-
       audioPlayer.load();
       audioPlayer.play(); 
+
     })
     
   })
@@ -169,10 +169,10 @@ $.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist", function(response)
     //creaste a card ;
     
     renderAudioTrack(response[i]);
-    console.log(response[i]);
+    // console.log(response[i]);
 
 
-    console.log(response[i].track);
+    // console.log(response[i].track);
   }
 
   
