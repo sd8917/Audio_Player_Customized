@@ -140,9 +140,9 @@ function renderAudioTrack(data){
   card.click(function(){
     // $(this).addClass("active");
     var id = $(this).attr("id");
-    console.log("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id);
+  
 
-    $.get("http://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
+    $.get("https://5dd1894f15bbc2001448d28e.mockapi.io/playlist/" + id, function(response){
 
       
       $("#audio-track-title").html(response.track);
